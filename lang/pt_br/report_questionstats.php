@@ -30,6 +30,7 @@ $string['lb_all_ctype'] = 'Todos';
 $string['lb_format_ctype'] = 'Texto com formatação';
 $string['lb_table_ctype'] = 'Texto com tabela';
 $string['lb_image_ctype'] = 'Texto com imagem';
+$string['lb_unknown_ctype'] = 'Tipo de questão desconhecido';
 $string['lb_course'] = 'Cursos que usam o tipo de questão: ';
 $string['lb_chart_serie'] = 'Estatísticas de utilização de questões';
 $string['btn_refresh'] = 'Atualizar';

@@ -74,7 +74,7 @@ if ($total > 0) {
         $ctype_name = get_string('pluginname', 'qtype_' . $item->typename);
 
         if ($ctype_name == '[[pluginname]]') {
-            $ctype_name = 'Tipo de questão desconhecido';
+            $ctype_name = get_string('lb_unknown_ctype', 'report_questionstats');
         }
 
         $chart_labels[] = $ctype_name; 
