@@ -33,4 +33,5 @@ $string['lb_course'] = 'Cursos que usam o módulo: ';
 $string['lb_chart_serie'] = 'Estatísticas de utilização de questões';
 $string['btn_refresh'] = 'Atualizar';
 $string['link_back'] = 'Voltar';
+$string['lb_total'] = 'Total';
 $string['link_summary'] = 'Ver cursos';

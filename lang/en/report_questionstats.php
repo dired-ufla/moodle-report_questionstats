@@ -33,4 +33,5 @@ $string['lb_course'] = 'Courses using the module: ';
 $string['lb_chart_serie'] = 'Question usage statistics';
 $string['btn_refresh'] = 'Refresh';
 $string['link_back'] = 'Back';
+$string['lb_total'] = 'Total';
 $string['link_summary'] = 'View courses';

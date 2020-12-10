@@ -70,6 +70,10 @@ if ($total > 0) {
 
         $ctype_name = get_string('pluginname', 'qtype_' . $item->typename);
 
+        if ($ctype_name == '[[pluginname]]') {
+            $ctype_name = 'Tipo de questão desconhecido';
+        }
+
         $chart_labels[] = $ctype_name; 
         $chart_values[] = $percent;
 
@@ -77,10 +81,12 @@ if ($total > 0) {
         $row[] = $item->amount;
         $row[] = $percent;
     
-        $index = $index + 1;
-
         $table->data[] = $row;
     }
+
+    $table->data[] = array(
+        get_string('lb_total', 'report_questionstats'), $total, 100 
+    );
 
     if (class_exists('core\chart_pie')) {
         $chart = new core\chart_pie();
@@ -91,6 +97,7 @@ if ($total > 0) {
         $chart->set_labels($chart_labels);
         echo $OUTPUT->render_chart($chart, false);
     }
+
 
     echo html_writer::table($table);
 }
