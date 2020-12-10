@@ -54,20 +54,22 @@ $total = $DB->count_records_sql(
 if ($total > 0) {
 
     $table = new html_table();
-    $table->size = array( '50%', '25%', '25%');
+    $table->size = array( '40%', '20%', '20%', '20%');
     $table->head = array(get_string('lb_qtype_name', 'report_questionstats'), get_string('lb_question_amount', 'report_questionstats'),
-        get_string('lb_question_usage', 'report_questionstats'));
+        get_string('lb_question_usage', 'report_questionstats'), get_string('lb_question_acumulated', 'report_questionstats'));
 
     $chart_labels = array();
     $chart_values = array();
 
     $ctype_name = '';
     $index = 1;
+    $acumulated = 0;
 
     foreach ($data as $item) {
         $row = array();
 
         $percent = number_format(($item->amount / $total) * 100, 2);
+        $acumulated = $acumulated + $percent;
 
         $ctype_name = get_string('pluginname', 'qtype_' . $item->typename);
 
@@ -81,6 +83,7 @@ if ($total > 0) {
         $row[] = $index . ' - ' . $ctype_name; 
         $row[] = $item->amount;
         $row[] = $percent;
+        $row[] = $acumulated;
     
         $index = $index + 1;
 
@@ -88,7 +91,7 @@ if ($total > 0) {
     }
 
     $table->data[] = array(
-        get_string('lb_total', 'report_questionstats'), $total, '100.00' 
+        get_string('lb_total', 'report_questionstats'), $total, '', '' 
     );
 
     if (class_exists('core\chart_pie')) {
