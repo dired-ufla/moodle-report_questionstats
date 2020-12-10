@@ -45,7 +45,7 @@ if ($ctype == REPORT_QUESTIONSTATS_FORMAT_CTYPE) {
 }
 
 $data = $DB->get_records_sql(
-    'SELECT Q.qtype as typename, COUNT(Q.qtype) AS amount FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> "random"' . $extraQuery . 'GROUP BY Q.qtype'
+    'SELECT Q.qtype as typename, COUNT(Q.qtype) AS amount FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> "random"' . $extraQuery . 'GROUP BY Q.qtype ORDER BY amount DESC'
 );
 $total = $DB->count_records_sql(
     'SELECT COUNT(Q.id) FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> "random"' . $extraQuery
@@ -62,6 +62,7 @@ if ($total > 0) {
     $chart_values = array();
 
     $ctype_name = '';
+    $index = 1;
 
     foreach ($data as $item) {
         $row = array();
@@ -77,10 +78,12 @@ if ($total > 0) {
         $chart_labels[] = $ctype_name; 
         $chart_values[] = $percent;
 
-        $row[] = $ctype_name; 
+        $row[] = $index . ' - ' . $ctype_name; 
         $row[] = $item->amount;
         $row[] = $percent;
     
+        $index = $index + 1;
+
         $table->data[] = $row;
     }
 

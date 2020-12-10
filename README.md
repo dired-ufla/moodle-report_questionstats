@@ -7,5 +7,6 @@ Hence, we developed "Question Usage Statistics"; this is a Moodle report plugin 
 
 ## Releases
 
+- v1.2: ordering data.
 - v1.1: fixing some bugs.
 - v1.0: this is the first version of the plugin.
