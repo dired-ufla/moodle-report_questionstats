@@ -85,7 +85,7 @@ if ($total > 0) {
     }
 
     $table->data[] = array(
-        get_string('lb_total', 'report_questionstats'), $total, 100 
+        get_string('lb_total', 'report_questionstats'), $total, '100.00' 
     );
 
     if (class_exists('core\chart_pie')) {
