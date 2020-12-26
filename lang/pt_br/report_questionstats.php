@@ -21,15 +21,16 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $string['pluginname'] = 'Estatísticas de uso de questões';
-$string['lb_choose_ctype'] = 'Filtrar por tipo de conteúdo';
+$string['lb_choose_ctype'] = 'Filtrar por tipo';
 $string['lb_qtype_name'] = 'Tipo de questão';
 $string['lb_question_usage'] = 'Uso (%)';
 $string['lb_question_acumulated'] = 'Acumulado (%)';
 $string['lb_question_amount'] = 'Quantidade de questões';
 $string['lb_all_ctype'] = 'Todos';
-$string['lb_format_ctype'] = 'Texto com formatação';
-$string['lb_table_ctype'] = 'Texto com tabela';
-$string['lb_image_ctype'] = 'Texto com imagem';
+$string['lb_format_ctype'] = 'Questão com texto formatado';
+$string['lb_table_ctype'] = 'Questão com tabela';
+$string['lb_image_ctype'] = 'Questão com imagem';
+$string['lb_feedback_ctype'] = 'Questão com feedback';
 $string['lb_unknown_ctype'] = 'Tipo de questão desconhecido';
 $string['lb_course'] = 'Cursos que usam o tipo de questão: ';
 $string['lb_chart_serie'] = 'Estatísticas de utilização de questões';

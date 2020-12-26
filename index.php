@@ -42,6 +42,8 @@ if ($ctype == REPORT_QUESTIONSTATS_FORMAT_CTYPE) {
     $extraQuery = ' AND Q.questiontext LIKE "%<table>%" ';
 } else if ($ctype == REPORT_QUESTIONSTATS_IMAGE_CTYPE) {
     $extraQuery = ' AND Q.questiontext LIKE "%<img%" ';
+} else if ($ctype == REPORT_QUESTIONSTATS_FEEDBACK_CTYPE) {
+    $extraQuery = ' AND Q.generalfeedback <> "" ';
 }
 
 $data = $DB->get_records_sql(

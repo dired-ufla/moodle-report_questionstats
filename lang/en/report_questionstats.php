@@ -21,15 +21,16 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 $string['pluginname'] = 'Question Usage Statistics';
-$string['lb_choose_ctype'] = 'Filter by content type';
+$string['lb_choose_ctype'] = 'Filter by type';
 $string['lb_qtype_name'] = 'Question type';
 $string['lb_question_usage'] = 'Usage (%)';
 $string['lb_question_acumulated'] = 'Acumulated (%)';
 $string['lb_question_amount'] = 'Questions amount';
 $string['lb_all_ctype'] = 'None';
-$string['lb_format_ctype'] = 'Formatted text';
-$string['lb_table_ctype'] = 'Text with table';
-$string['lb_image_ctype'] = 'Text with image';
+$string['lb_format_ctype'] = 'Question with formatted text';
+$string['lb_table_ctype'] = 'Question with table';
+$string['lb_image_ctype'] = 'Question with image';
+$string['lb_feedback_ctype'] = 'Question with feedback';
 $string['lb_unknown_ctype'] = 'Unknown Question type';
 $string['lb_course'] = 'Courses using the question: ';
 $string['lb_chart_serie'] = 'Question usage statistics';

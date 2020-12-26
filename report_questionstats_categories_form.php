@@ -32,6 +32,7 @@ class report_questionstats_categories_form extends moodleform {
         $cat_names[REPORT_QUESTIONSTATS_FORMAT_CTYPE] = get_string('lb_format_ctype', 'report_questionstats');
         $cat_names[REPORT_QUESTIONSTATS_TABLE_CTYPE] = get_string('lb_table_ctype', 'report_questionstats');
         $cat_names[REPORT_QUESTIONSTATS_IMAGE_CTYPE] = get_string('lb_image_ctype', 'report_questionstats');
+        $cat_names[REPORT_QUESTIONSTATS_FEEDBACK_CTYPE] = get_string('lb_feedback_ctype', 'report_questionstats');
 
         $mform->addElement('select', 'ctype', get_string('lb_choose_ctype', 'report_questionstats'), $cat_names);
         $this->add_action_buttons(false, get_string('btn_refresh', 'report_questionstats'));

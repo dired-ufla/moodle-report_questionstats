@@ -7,8 +7,9 @@ Hence, we developed "Question Usage Statistics"; this is a Moodle report plugin 
 
 ## Releases
 
-- v1.4: fixing translation issue.
-- v1.3: showing acumulated values.
-- v1.2: ordering data.
-- v1.1: fixing some bugs.
-- v1.0: this is the first version of the plugin.
+- v1.5: filter question with feedback.
+- v1.4: fix translation issue.
+- v1.3: show acumulated values.
+- v1.2: order data.
+- v1.1: fix some bugs.
+- v1.0: first version of the plugin.
