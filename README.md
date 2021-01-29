@@ -7,6 +7,7 @@ Hence, we developed "Question Usage Statistics"; this is a Moodle report plugin 
 
 ## Releases
 
+- v1.5.1: fix postgres compatibility.
 - v1.5: filter question with feedback.
 - v1.4: fix translation issue.
 - v1.3: show acumulated values.

@@ -37,20 +37,20 @@ $mform->display();
 $extraQuery = '';
 
 if ($ctype == REPORT_QUESTIONSTATS_FORMAT_CTYPE) {
-    $extraQuery = ' AND (Q.questiontext LIKE "%<b>%" OR Q.questiontext LIKE "%<i>%" OR Q.questiontext LIKE "%<li>%") ';
+    $extraQuery = ' AND (Q.questiontext LIKE \'%<b>%\' OR Q.questiontext LIKE \'%<i>%\' OR Q.questiontext LIKE \'%<li>%\') ';
 } else if ($ctype == REPORT_QUESTIONSTATS_TABLE_CTYPE) {
-    $extraQuery = ' AND Q.questiontext LIKE "%<table>%" ';
+    $extraQuery = ' AND Q.questiontext LIKE \'%<table>%\' ';
 } else if ($ctype == REPORT_QUESTIONSTATS_IMAGE_CTYPE) {
-    $extraQuery = ' AND Q.questiontext LIKE "%<img%" ';
+    $extraQuery = ' AND Q.questiontext LIKE \'%<img%\' ';
 } else if ($ctype == REPORT_QUESTIONSTATS_FEEDBACK_CTYPE) {
-    $extraQuery = ' AND Q.generalfeedback <> "" ';
+    $extraQuery = ' AND Q.generalfeedback <> \'\' ';
 }
 
 $data = $DB->get_records_sql(
-    'SELECT Q.qtype as typename, COUNT(Q.qtype) AS amount FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> "random"' . $extraQuery . 'GROUP BY Q.qtype ORDER BY amount DESC'
+    'SELECT Q.qtype as typename, COUNT(Q.qtype) AS amount FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> \'random\'' . $extraQuery . 'GROUP BY Q.qtype ORDER BY amount DESC'
 );
 $total = $DB->count_records_sql(
-    'SELECT COUNT(Q.id) FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> "random"' . $extraQuery
+    'SELECT COUNT(Q.id) FROM {question} AS Q WHERE Q.hidden = 0 AND Q.qtype <> \'random\'' . $extraQuery
 );
 
 if ($total > 0) {
